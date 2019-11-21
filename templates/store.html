@@ -6,10 +6,17 @@
 </head>
 <body>
 	<ul class="nevbar">
-  		<li class="nevbarli"><a class="active" class="nevbarli_a" href="{{ url_for(home.html)}}">Home</a></li>
-  		<li class="nevbarli"><a class="nevbarli_a" href="{{ url_for(srote.html)}}">store</a></li>
-  		<li class="nevbarli"><a class="nevbarli_a"href="{{ url_for(about.html)}}">About</a></li>
-  	</ul>
+		<li class="nevbarli"><a class="nevbarli_a" href="{{ url_for('home')}}">Home</a></li>
+		<li class="nevbarli"><a class="nevbarli_a" href="{{ url_for('store')}}">store</a></li>
+		<li class="nevbarli"><a class="nevbarli_a"href="{{ url_for('about')}}">About</a></li>
+	</ul>
+	<div class="card">
+		<img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+		<h1>Tailored Jeans</h1>
+		<p class="price">$19.99</p>
+		<p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+		<p><button>Add to Cart</button></p>
+	</div>
 
 
 
