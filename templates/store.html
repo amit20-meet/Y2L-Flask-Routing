@@ -10,15 +10,22 @@
 		<li class="nevbarli"><a class="nevbarli_a" href="{{ url_for('store')}}">store</a></li>
 		<li class="nevbarli"><a class="nevbarli_a"href="{{ url_for('about')}}">About</a></li>
 	</ul>
-	<div class="card">
-		<img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
-		<h1>Tailored Jeans</h1>
-		<p class="price">$19.99</p>
-		<p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-		<p><button>Add to Cart</button></p>
-	</div>
+	<br><br><br><br>
+	
+			{% for Product in products%}
+			<div class="card">
+				<img src="{{url_for('static',filename= Product.picture_link)}}" style="width:100%">
+				<h1>{{Product.name}}</h1>
+				<p class="price">{{Product.price}}$</p>
+				<p><button>Add to Cart</button></p>
+			</div>
+			{% endfor %}
 
 
+	   
+
+
+   
 
 
 </body>
