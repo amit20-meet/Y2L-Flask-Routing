@@ -1,4 +1,4 @@
-from model import Base, Product
+from model import Base, Product, Cart
 
 
 from sqlalchemy import create_engine
@@ -18,6 +18,15 @@ def add_product(id, name, price, picture_link):
 		picture_link=picture_link)
 	session.add(declarative_base)
 	session.commit()
+###
+def add_cart( id, name, price):
+	declarative_base = Cart(
+		id_cart= id ,
+		name_cart=name,
+		price_cart=price)
+	session.add(declarative_base)
+	session.commit()
+
 
 #add_product(1, 'bear1', 350, 'bear1.png')
 #add_product(2, 'bear2', 500, 'bear2.jpg')
@@ -39,6 +48,10 @@ def query_all():
 	products = session.query(
 		Product).all()
 	return products
+def query_all_cart():
+	carts = session.query(
+		Cart).all()
+	return carts
 
 
 print(query_all())

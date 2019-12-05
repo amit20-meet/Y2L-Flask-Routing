@@ -33,6 +33,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
+  position: :"middle";
   text-align: center;
   font-family: arial;
 }
@@ -40,6 +41,7 @@
 .price {
   color: grey;
   font-size: 22px;
+
 }
 
 .card button {
@@ -52,4 +54,9 @@
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
