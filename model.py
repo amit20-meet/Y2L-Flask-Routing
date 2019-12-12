@@ -14,7 +14,8 @@ class Product(Base):
 
 class Cart(Base):
 	__tablename__ = 'carts'
-	id_cart = Column(Integer, primary_key=True)
+	id= Column(Integer,primary_key=True)
+	id_cart = Column(Integer)
 	name_cart = Column(String)
 	price_cart = Column(Float)
 

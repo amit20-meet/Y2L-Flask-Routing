@@ -10,6 +10,7 @@
 		<li class="nevbarli"><a class="nevbarli_a" href="{{ url_for('store')}}">store</a></li>
 		<li class="nevbarli"><a class="nevbarli_a"href="{{ url_for('about')}}">About</a></li>
 		<li class="nevbarli"><a class="nevbarli_a"href="{{ url_for('cart')}}">Carts</a></li>
+		<li class="nevbarli"><a class="nevbarli_a" href="{{ url_for('login')}}">login</a></li>
 	</ul>
 	<br><br><br><br>
 	
@@ -18,7 +19,8 @@
 				<img src="{{url_for('static',filename= Product.picture_link)}}" style="width:100%">
 				<h1>{{Product.name}}</h1>
 				<p class="price">{{Product.price}}$</p>
-				<p><button><a href="{{ url_for('add_to_cart', name=Product.name, price=Product.price, id=Product.id)}}">Add to Cart</a></button></p>
+				<p><button><a href="{{ url_for('add_to_cart', name=Product.name, price=Product.price, Id=Product.id)}}">Add to Cart</a></button></p>
+
 			</div>
 			{% endfor %}
 

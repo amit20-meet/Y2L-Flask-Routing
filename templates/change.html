@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="/change" method="POST">
+    <input type="text" name="Name" placeholder=" 'Product Name'" value={{request.form.name}}>
+    <input type="text" name="Price" placeholder="Product Price" value={{request.form.price}}>
+    <input type="text" name="Picture_link" placeholder="'Picture_link.jpg'" value={{request.form.picture_link}}>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

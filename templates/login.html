@@ -2,8 +2,24 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+	<ul class="nevbar">
+		<li class="nevbarli"><a class="nevbarli_a" href="{{ url_for('home')}}">Home</a></li>
+		<li class="nevbarli"><a class="nevbarli_a" href="{{ url_for('store')}}">store</a></li>
+		<li class="nevbarli"><a class="nevbarli_a"href="{{ url_for('about')}}">About</a></li>
+		<li class="nevbarli"><a class="nevbarli_a"href="{{ url_for('cart')}}">Carts</a></li>
+		<li class="nevbarli"><a class="nevbarli_a" href="{{ url_for('login')}}">login</a></li>
+	</ul>
+
+<form action="/login" method="POST">
+    <input type="text" name="userName" placeholder="User Name" value={{request.form.userName}}>
+    <br>
+    <input type="text" name="password" placeholder="Password" value={{request.form.passward}}>
+    <br>
+    <input type="submit" value="Submit">
+</form>
 
 </body>
 </html>
